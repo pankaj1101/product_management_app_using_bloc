@@ -1,4 +1,3 @@
-Here’s a well-formatted description for your GitHub repository:
 
 ---
 
