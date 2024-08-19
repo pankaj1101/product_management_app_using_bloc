@@ -41,12 +41,12 @@ A robust Flutter application for managing and viewing products, built with moder
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/pankaj1101/Flutter_ECommerce_App_Using_Bloc.git
+   git clone https://github.com/pankaj1101/Flutter_Product_Management_App.git
    ```
 
 2. **Navigate to the project directory:**
    ```bash
-   cd Flutter_ECommerce_App_Using_Bloc
+   cd Flutter_Product_Management_App
    ```
 
 3. **Install dependencies:**
