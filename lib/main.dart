@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:learn_bloc/app_bloc_observer.dart';
 import 'package:learn_bloc/shopping/cart/bloc/cart_screen_bloc.dart';
 import 'package:learn_bloc/shopping/cart/cart_screen.dart';
 import 'package:learn_bloc/counter/bloc/counter_app_bloc.dart';
@@ -11,6 +12,7 @@ import 'package:learn_bloc/shopping/products/product_screen.dart';
 import 'package:learn_bloc/slider/bloc/slider_screen_bloc.dart';
 
 void main() {
+  Bloc.observer = AppBlocObserver();
   runApp(const MyApp());
 }
 
