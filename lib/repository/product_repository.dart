@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 import 'package:learn_bloc/models/products_model.dart';
+import 'package:learn_bloc/network/dio_helper.dart';
 
 class ProductRepository {
   Future<ProductsModel?> getProductDetails() async {
@@ -28,6 +29,15 @@ class ProductRepository {
       } else {
         return null;
       }
+    } catch (e) {
+      rethrow;
+    }
+  }
+
+  Future<ProductsModel?> getProductDetailsUsingDio() async {
+    try {
+      final response = await DioHelper().get(endPoint: '/product');
+      return ProductsModel.fromJson(response);
     } catch (e) {
       rethrow;
     }
