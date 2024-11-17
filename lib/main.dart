@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:learn_bloc/app_bloc_observer.dart';
+import 'package:learn_bloc/dio_practice/bloc/dio_practice_bloc.dart';
+import 'package:learn_bloc/dio_practice/dio_practice_page.dart';
 import 'package:learn_bloc/shopping/cart/bloc/cart_screen_bloc.dart';
 import 'package:learn_bloc/shopping/cart/cart_screen.dart';
 import 'package:learn_bloc/counter/bloc/counter_app_bloc.dart';
@@ -40,6 +42,9 @@ class MyApp extends StatelessWidget {
           create: (context) => CartScreenBloc(),
           child: const CartScreen(),
         ),
+        BlocProvider<DioPracticeBloc>(
+          create: (context) => DioPracticeBloc(),
+        ),
       ],
       child: MaterialApp(
         title: 'Flutter ',
@@ -48,7 +53,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.teal),
           useMaterial3: true,
         ),
-        home: const ProductsScreen(),
+        home: const DioPracticePage(),
       ),
     );
   }
